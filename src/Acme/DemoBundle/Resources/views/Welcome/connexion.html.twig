@@ -1,0 +1,48 @@
+
+<html lang="fr">
+  <head>
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Bibliothéque</title>
+
+
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/signin.css')}}" rel="stylesheet">
+
+    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+	
+
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin text-center" action="{{path("fos_user_security_check")}}" method="post">
+           <input type="hidden" name="_csrf_token" value="K0C0zvIDOmJXi6AVB_V4ACMDWMQt_LdlSZDmPwcc_Zc" />
+         <img src="{{asset('assets/images/logo.png')}}" width="300px" style="margin-bottom: 20px"/>
+          <h1 class="form-signin-heading  text-danger">Bibliothèque</h1>
+          <hr>
+          <h2 class="form-signin-heading  text-danger">SVP Connectez-vous</h2>
+       
+        <label for="inputEmail" class="sr-only">Identifiant:</label>
+        <input type="text" id="username" name="_username" value="" required="required" class="form-control" >
+        <label for="inputPassword" class="sr-only">Mot de passe</label>
+        <input type="password" id="password" name="_password" class="form-control" required="required" />
+       
+        <button class="btn btn-lg btn-danger btn-block" type="submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}">Connectez</button>
+      </form>
+
+    </div> <!-- /container -->
+
+  
+   
+  </body>
+</html>{# empty Twig template #}

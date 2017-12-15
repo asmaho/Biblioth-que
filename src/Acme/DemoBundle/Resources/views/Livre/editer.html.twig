@@ -1,0 +1,170 @@
+
+<html lang="fr">
+  <head>
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Bibliothéque</title>
+
+
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+	
+
+    
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bibliothéque</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li class="active"><a href="#">Accueil</a></li>
+            
+			
+           
+			<li>
+					<form class="navbar-form navbar-right">
+					<div class="input-group">
+					  <input type="text" class="form-control"  aria-describedby="basic-addon1">
+					  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+					</div>
+					
+				  </form>
+		  </li>
+		   <li class="dropdown ">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+				
+				</li>
+				 <li>
+				<a href="../deconnexion.php">Déconnexion</a>
+				</li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<br><br><br><br>
+    <div class="container theme-showcase" role="main">
+<div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active">
+				<a href="mesevennements.php"> Livres </a>
+			</li>
+            <li >
+				<a href="">Etudiants</a>
+			</li>
+			<li >
+				<a href="">Emprunts</a>
+			</li>
+            
+          </ul>
+          
+        </div>
+		<div class="col-sm-9 col-md-10">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<form action="" method="POST">
+			 
+			 <div class="form-group ">
+				<label >Nom</label>
+				<input type="text" class="form-control" name="nom"  value="{{liv.nom}}" placeholder="Nom" required>
+			 </div>
+                    
+                        <div class="form-group ">
+				<label >Auteur</label>
+				<input type="text" class="form-control" name="auteur"  value="{{liv.auteur}}" placeholder="Auteur" required>
+			 </div>
+                    
+                         <div class="form-group ">
+				<label >ISBN</label>
+				<input type="text" class="form-control" name="isbn"  value="{{liv.isbn}}" placeholder="ISBN" required>
+			 </div>
+                    
+                        <div class="form-group ">
+				<label >Date</label>
+                                <input type="text" class="form-control" name="date"  value="{{liv.date|date('Y-m-d')}}" placeholder="Date" required>
+			 </div>
+			  
+			  
+			  
+			   
+			 
+			  
+			  
+                 <button type="submit" class="btn btn-warning"> Modifier </button>
+		  </form>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+</div>
+
+
+
+
+     
+				
+				
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+    
+  
+    
+  </body>
+</html>{# empty Twig template #}

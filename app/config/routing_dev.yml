@@ -1,0 +1,107 @@
+_wdt:
+    resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
+    prefix:   /_wdt
+
+_profiler:
+    resource: "@WebProfilerBundle/Resources/config/routing/profiler.xml"
+    prefix:   /_profiler
+
+_configurator:
+    resource: "@SensioDistributionBundle/Resources/config/routing/webconfigurator.xml"
+    prefix:   /_configurator
+
+_errors:
+    resource: "@TwigBundle/Resources/config/routing/errors.xml"
+    prefix:   /_error
+
+_main:
+    resource: routing.yml
+
+# AcmeDemoBundle routes (to be removed)
+_acme_demo:
+    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+    
+    
+    #############################################################################
+    
+connexion:
+    path:     /connexion
+    defaults: { _controller: AcmeDemoBundle:Welcome:connexion }
+admin:
+    path:     /admin
+    defaults: { _controller: AcmeDemoBundle:Admin:index }
+adminlivreliste:
+    path:     /admin/livres/liste
+    defaults: { _controller: AcmeDemoBundle:Admin:livre }
+
+adminetudiantliste:
+    path:     /admin/etudiant/liste
+    defaults: { _controller: AcmeDemoBundle:Admin:etudiant }
+
+adminajouteretudiant:
+    path:     /admin/etudiant/ajout
+    defaults: { _controller: AcmeDemoBundle:Admin:ajouteretudiant }
+    
+admindesactiveetudiant:
+    path:     /admin/etudiant/desactiver/{id}
+    defaults: { _controller: AcmeDemoBundle:Admin:desactiveretudiant }
+    
+adminvoireetudiant:
+    path:     /admin/etudiant/voir/{id}
+    defaults: { _controller: AcmeDemoBundle:Admin:voireetudiant }
+    
+adminempruntetudiant:
+    path:     /admin/etudiant/emprunt/{id}
+    defaults: { _controller: AcmeDemoBundle:Admin:listeempruntetudiant }
+  
+  
+
+admincategorieliste:
+    path:     /admin/categorie/liste
+    defaults: { _controller: AcmeDemoBundle:Admin:categorie }
+
+adherent:
+    path:     /adherent
+    defaults: { _controller: AcmeDemoBundle:Adherent:index }
+
+adherentlivreliste:
+    path:     /adherent/livres/liste
+    defaults: { _controller: AcmeDemoBundle:Adherent:livre }
+
+adherentemprunterlivre:
+     path:     /adherent/livre/emprunter/{id}
+     defaults: { _controller: AcmeDemoBundle:Emprunt:emprunt }
+
+adherentemprunterlivreliste:
+     path:     /adherent/livre/emprunt/
+     defaults: { _controller: AcmeDemoBundle:Emprunt:liste }
+    
+#############
+listlivre:
+     path:     /livre/liste/
+     defaults: { _controller: AcmeDemoBundle:Livre:index }
+     
+ajoutlivre:
+     path:     /admin/livre/ajout/
+     defaults: { _controller: AcmeDemoBundle:Livre:ajout }
+
+editlivre:
+     path:     /livre/edit/{id}
+     defaults: { _controller: AcmeDemoBundle:Livre:edit }
+     
+supplivre:
+     path:     /admin/livre/supp/{id}
+     defaults: { _controller: AcmeDemoBundle:Livre:supp }
+
+voirlivre:
+     path:     /livre/voir/{id}
+     defaults: { _controller: AcmeDemoBundle:Livre:voir }
+     
+empruntlivre:
+     path:     /livre/emprunt/
+     defaults: { _controller: AcmeDemoBundle:Emprunt:index }
+
+emprunterlivre:
+     path:     /livre/emprunter/{id}
+     defaults: { _controller: AcmeDemoBundle:Emprunt:emprunt }
+          
